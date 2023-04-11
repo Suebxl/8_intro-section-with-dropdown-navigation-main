@@ -23,25 +23,17 @@ exit.addEventListener("click",()=> {
   body.classList.remove("opacity")
 })
 
-let replaced= false;
+let replaced = false;
 dropdownBtn.addEventListener("click", ()=> {
   featuresItems.forEach(item => item.classList.toggle("display"))
   arrowFeatures.src= replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
   replaced = !replaced
 })
 
+
+let changed = false
 dropdownBtnCompany.addEventListener("click", ()=> {
   companyItems.forEach(item => item.classList.toggle("display"))
-  arrowCompany.src= replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
-  replaced = !replaced
+  arrowCompany.src= changed? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
+  changed = !changed
 })
-
-
-/*
-
-arrowDownCompany.addEventListener("click", ()=> {
-  menuCompany.classList.toggle("hidden")
-  arrowDownCompany.src = replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
-
-})
-*/

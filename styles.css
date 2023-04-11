@@ -148,7 +148,7 @@ header{
   }
 
 }
-/******end media query larger screens***********/
+/****** end media query larger screens***********/
 
 main {
   display: flex;
@@ -217,7 +217,7 @@ main {
     flex-direction: row;
     gap: 2rem;
     padding: 0 2em;
-    margin: 5em;
+    margin: 8em 4em 4em;
   }
 
   .main-text {

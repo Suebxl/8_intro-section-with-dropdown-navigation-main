@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../8_info"
+		},
+		{
+			"path": "."
+		}
+	],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "8_intro-section-with-dropdown-navigation-main"
+  }
+}

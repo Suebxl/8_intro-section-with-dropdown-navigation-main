@@ -5,100 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Suzanne | Frontend Mentor | Intro section with dropdown navigation</title>
-
 </head>
-<body>
-  <div class="container" id="container">
 
-    <div class="header">
-      <img class="logo-company" src="./images/logo.svg" alt="logo">
-      <img class="logo-menu" id="icon-menu" src="./images/icon-menu.svg" alt="icon-menu">
-    </div>
+<body id="body">
+  <header class="wrapper">
+    <img class="logo-company" src="./images/logo.svg" alt="logo">
+    <img src="./images/icon-menu.svg" class="menu" id="menu-btn" alt="open menu">
 
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#" id="exit-btn"><img class="exit" src="./images/icon-close-menu.svg" alt=""></a> </li>
+        <li class="nav-headers"><a id="dropdown-btn" href="#">Features <span> <img id="arrow-features" src="./images/icon-arrow-down.svg" alt=""></span></a>
+          <div class="dropdown-content">
+            <ul>
+              <li class="nav-items"> <a class="feature-item" href="#"><img class="icon-img" src="./images/icon-todo.svg" alt=""> Todo list</a></li>
+              <li class="nav-items"> <a class="feature-item" href="#"><img class="icon-img" src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+              <li class="nav-items"> <a class="feature-item" href="#"><img class="icon-img" src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+              <li class="nav-items"> <a class="feature-item" href="#"><img class="icon-img" src="./images/icon-planning.svg" alt=""> Planning</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-headers"> <a id="dropdown-btn-company"href="#">Company <span> <img id="arrow-company" src="./images/icon-arrow-down.svg" alt=""></span></a>
+          <div class="dropdown-content-company">
+            <ul>
+              <li class="nav-items"> <a class="company-item" href="#">History</a> </li>
+              <li class="nav-items"> <a class="company-item" href="#">Our team</a></li>
+              <li class="nav-items"> <a class="company-item" href="#">Blog</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-headers"> <a> Careers </a></li>
+        <li class="nav-headers"> <a> About </a></li>
+        <li>
+          <ul class="nav-user">
+            <li class="nav-items"> <a class="login" href="#">Login</a> </li>
+            <li class="nav-items"><a class="register" href="#">Register</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main>
     <img class="hero-image" src="./images/image-hero-mobile.png" alt="image-hero">
-
-    <div class="main">
-      <h1> Make remote work </h1>
-      <p> Get your team in sync, no matter your location. Streamline processes,
-      create team rituals, and watch productivity soar.</p>
-
-      <a href="" class="button-learn">  Learn more </a>
-
+    <section class="main-text wrapper">
+      <h1 class="title-main-text"> Make remote work </h1>
+      <p class="description-main-text"> Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.</p>
+      <a href="#" class="button-learn">  Learn more </a>
       <div class="clients-logos">
         <img class="client-logo" src="./images/client-databiz.svg" alt="client-logo">
         <img class="client-logo" src="./images/client-audiophile.svg" alt="client-logo">
         <img class="client-logo" src="./images/client-meet.svg" alt="client-logo">
         <img class="client-logo" src="./images/client-maker.svg" alt="client-logo">
       </div>
+    </section>
+  </main>
 
-    </div>
-
-    <footer class="footer">
-      <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Suzanne</a>.
-        </div>
-    </footer>
-
-  </div>
-
-  <div class="menu-bar hidden" id="menu-bar">
-    <i class="fa-regular fa-x close-menu" id="close-menu-bar"></i>
-
-    <div class="features-items">
-      <h4 class="features-title">Features</h4>
-      <img src="./images/icon-arrow-down.svg" id="arrow-down-features" alt="">
-    </div>
-
-    <div class="menu-expanded hidden" id="menu-features">
-      <div class="features-items">
-        <img class="logo-feature" src="./images/icon-todo.svg" alt="icon-todo">
-        <p class="sub-title">Todo List</p>
-      </div>
-      <div class="features-items">
-        <img class="logo-feature" src="./images/icon-calendar.svg" alt="icon-calendar">
-        <p class="sub-title">Calendar</p>
-      </div>
-      <div class="features-items">
-        <img class="logo-feature" src="./images/icon-reminders.svg" alt="icon-reminders">
-        <p class="sub-title">Reminders</p>
-      </div>
-      <div class="features-items">
-        <img class="logo-feature" src="./images/icon-planning.svg" alt="icon-planning">
-        <p class="sub-title">Planning</p>
-      </div>
-    </div>
-
-    <div class="features-items">
-      <h4 class="features-title ">Company</h4>
-      <img src="./images/icon-arrow-down.svg" id="arrow-down-company" alt="">
-    </div>
-
-    <div class="menu-expanded hidden" id="menu-company">
-      <div class="features-items">
-        <p class="sub-title">history</p>
-      </div>
-      <div class="features-items">
-        <p class="sub-title">Our Team</p>
-      </div>
-      <div class="features-items">
-        <p class="sub-title">blog</p>
-      </div>
-    </div>
-
-    <h4 class="features-title margin-top">Careers</h4>
-    <h4 class="features-title margin-top">About</h4>
-    <div class="register-login-container">
-      <a href="">Login</a>
-      <a href="" class="register-button">Register</a>
-    </div>
-  </div>
-
-  <script src="./index.js"> </script>
+<script src="./index.js"> </script>
 </body>
 </html>

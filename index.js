@@ -1,32 +1,47 @@
-const iconMenu = document.getElementById("icon-menu")
-const menuBar = document.getElementById("menu-bar")
-const closeMenuBar = document.getElementById("close-menu-bar")
-const container = document.getElementById("container")
-const arrowDownFeatures = document.getElementById("arrow-down-features")
-const menuFeatures = document.getElementById("menu-features")
-const arrowDownCompany = document.getElementById("arrow-down-company")
-const menuCompany = document.getElementById("menu-company")
+const open = document.getElementById("menu-btn")
+const nav = document.getElementById("nav")
+const exit = document.getElementById("exit-btn")
+const body = document.getElementById("body");
 
-iconMenu.addEventListener("click",()=> {
-  menuBar.classList.remove("hidden")
-  container.classList.add("opacity")
+const dropdownBtn = document.getElementById("dropdown-btn")
+const featuresItems = document.querySelectorAll(".feature-item")
+const arrowFeatures = document.getElementById("arrow-features")
+
+const dropdownBtnCompany = document.getElementById("dropdown-btn-company")
+const companyItems = document.querySelectorAll(".company-item")
+const arrowCompany = document.getElementById("arrow-company")
+
+
+
+open.addEventListener("click",()=> {
+  nav.classList.add("visible")
+  body.classList.add("opacity")
 })
 
-closeMenuBar.addEventListener("click",()=> {
-  menuBar.classList.add("hidden")
-  container.classList.remove("opacity")
+exit.addEventListener("click",()=> {
+  nav.classList.remove("visible")
+  body.classList.remove("opacity")
 })
 
-let replaced = false;
-
-arrowDownFeatures.addEventListener("click", ()=> {
-  menuFeatures.classList.toggle("hidden")
-  arrowDownFeatures.src = replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
+let replaced= false;
+dropdownBtn.addEventListener("click", ()=> {
+  featuresItems.forEach(item => item.classList.toggle("display"))
+  arrowFeatures.src= replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
   replaced = !replaced
 })
+
+dropdownBtnCompany.addEventListener("click", ()=> {
+  companyItems.forEach(item => item.classList.toggle("display"))
+  arrowCompany.src= replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
+  replaced = !replaced
+})
+
+
+/*
 
 arrowDownCompany.addEventListener("click", ()=> {
   menuCompany.classList.toggle("hidden")
   arrowDownCompany.src = replaced? "./images/icon-arrow-down.svg" : "./images/icon-arrow-up.svg"
-  replaced = !replaced
+
 })
+*/
